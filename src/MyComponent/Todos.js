@@ -9,16 +9,13 @@ export const Todos = ({todoss,onDelete}) => {
   return (
     <div className='container' style={myStyle}>
       <h3 className='my-3'>Todos List</h3>
-      {todoss.length===0? <b>No Todos List to display</b>:
+      {(todoss.length===0 || todoss.sno=="0")? <b>No Todos List to display</b>:
       todoss.map((todo)=>{
         return(
           <TodoItem todo2={todo} key={todo.sno} onDelete={onDelete}/>
         )
       })
-
       }
-      
-
     </div>
   )
 }

@@ -21,6 +21,13 @@ function App() {
       return  e!==todo2;
     }) )
   }
+  const [todos,setTodos]= useState([
+    {
+      sno: "0",
+      title:" ",
+      desc:" "
+    }
+  ] ) ;
 
   const addTodom=(title,desc)=>{
     let sno;
@@ -37,20 +44,12 @@ function App() {
     }
     setTodos([...todos,mytodo ]);
   }
-  const [todos,setTodos]= useState([
-    {
-      sno: 1,
-      title:"title 1",
-      desc:"description 1"
-    }
-  ] ) ;
+  
 
   return (
     <>
     <Router>
       <Heade heading="Main-Menu" data={false} />
-      
-      
       <Switch>
           <Route path="/" render={()=>{
             return(
